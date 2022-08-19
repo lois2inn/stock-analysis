@@ -1,7 +1,7 @@
 # Stock Analysis - Stock Performance and Runtime Performance of Refactored VBA Script
 
 ## Overview
-A financial analyst, Steve, wanted to analyze some green energy stocks for years 2017 and 2018. To help Steve, Excel Macros using Visual Basic for Applications (VBA) were created.
+Steve, a financial analyst, wanted to analyze some green energy stocks for years 2017 and 2018. To help Steve, Excel Macros using Visual Basic for Applications (VBA) were created.
 
 ### Purpose
 The purpose of this project was to compare the stock performance between 2017 and 2018. The original code written to analyze stocks was refactored so that the execution times can be compared. 
@@ -9,8 +9,43 @@ The purpose of this project was to compare the stock performance between 2017 an
 ## Results
 
 ### Comparison of Stock Performance between 2017 and 2018
+The yearly returns of 12 different stocks were compared between 2017 and 2018.  
 
-### Comparison of Execution times between Original and Refactored Scripts
+![Stock_Returns_2017_2018.png](/resources/Stock_Returns_2017_2018.png)
+
+- There was a decrease of returns across stocks in 2018 compared to 2017 except for RUN and TERP tickers
+- RUN showed a growth of around 80% in 2018 than the previous year.
+- Though TERP had below zero returns in 2017 and 2018, the decline slowed in 2018. 
+- DQ did extremely well in 2017 with almost 200% yearly returns followed by SEDG.  
+- ENPH and FSLR have over 100% returns in 2017.  The growth of ENPH slowed by 47% in 2018.
+- Except for RUN, the rest of the stocks did not fare well in 2018 compared to 2017.
+
+### Comparison of Execution Times between Original and Refactored Scripts
+The execution time of the original script and refactored script were recorded.  
+<table>
+   <tr>
+    <td><b>Original Script Run time for year 2017</b> </td>
+    <td><b>Refactored Script Run time for year 2017 </td>
+   </tr>
+  <tr>
+    <td><img src="/resources/Original_2017.png" width="400" border="5px"/> </td>
+    <td><img src="/resources/VBA_Challenge_2017.png" width="400"/> </td>
+  </tr>
+  <tr>
+    <td><b>Original Script Run time for year 2018 </b> </td>
+    <td><b>Refactored Script Run time for year 2018 </b> </td>
+  </tr>
+  <tr>
+    <td><img src="/resources/Original_2018.png" width="400" border="5px"/> </td>
+    <td><img src="/resources/VBA_Challenge_2018.png" width="400"/> </td>
+  </tr>
+</table>
+
+- The original Script run time for 2017: 0.5898438 seconds. The refactored Script run time for 2017: 0.1054688 seconds
+- The script run time for 2017 with refactoring decreased by 82%
+- The original Script run time for 2018: 0.5898438 seconds. The refactored Script run time for 2018: 0.109375 seconds
+- The script run time for 2018 with refactoring decreased by 81%
+- Refactoring the code proved beneficial as the run time was decreased over 80% for this dataset.
 
 ## Summary
 
