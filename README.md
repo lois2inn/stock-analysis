@@ -1,7 +1,7 @@
 # Stock Analysis - Stock Performance and Runtime Performance of Refactored VBA Script
 
 ## Overview
-Steve, a financial analyst, wanted to analyze some green energy stocks for years 2017 and 2018. To help Steve, Excel Macros using Visual Basic for Applications (VBA) were created.
+Steve, a financial analyst, wanted to analyze some green energy stocks for years 2017 and 2018. To help Steve do the same, Excel Macros using Visual Basic for Applications (VBA) were created.
 
 ### Purpose
 The purpose of this project was to compare the stock performance between 2017 and 2018. The original code written to analyze stocks was refactored so that the execution times can be compared. 
@@ -56,6 +56,12 @@ The execution time of the original script and refactored script were recorded.
 
 
 **Advantages and Disadvantages of the original and refactored VBA script**
+- The refactored VBA script used arrays to hold stock data. This provided advantage to speed up the execution time because all array elements are stored in continuous memory location. Thereby providing easy retrieval/addition/modification of elements when compared to using Double, Integer or String variables. Since an array has a single name and holds same datatype, the script is easy to read, and maintain.
+As the dataset grows or with dealing unknown number of stocks to analyze, dynamic arrays can be used. The size can be determined and be set at a later point in the code.
+- The refactored code had several for loops. Though, loops are often bottlenecks of performance for an application, they are an essential part of programming. The key to speeding up the script is to make the loops run faster. The refactoring added three for loops, each doing a different (lightweight) task helped to bring down the execution time of overall script.
+- The original VBA script held the core logic of the script in the inner loop of nested for loop. Temporary variables (of datatype: String, Integer, Double) hold and write the data to the output spreadsheet. Performing many tasks in the inner loop slowed down run time of the original code.
+- When the data set increases and more data aspects need to be analyzed, the execution times of original and refactored scripts will considerably slow down. Design decisions like storing and retrieving data from a database should be made accordingly.  
+
 
 
 
