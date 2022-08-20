@@ -25,7 +25,7 @@ The execution time of the original script and refactored script were recorded.
 <table>
    <tr>
     <td><b>Original Script Run time for year 2017</b> </td>
-    <td><b>Refactored Script Run time for year 2017 </td>
+    <td><b>Refactored Script Run time for year 2017 </b> </td>
    </tr>
   <tr>
     <td><img src="/resources/Original_2017.png" width="400" border="5px"/> </td>
@@ -48,6 +48,17 @@ The execution time of the original script and refactored script were recorded.
 - **Refactoring the code proved beneficial as the run time decreased over 80% for this dataset**
 - The refactored VBA script used **arrays** to store data and write to the output spreadsheet while the original script relied on double, string and integer datatypes within nested loops to do the same.
 
+<table>
+   <tr>
+      <td><b> Original Code Snippet </b> </td>
+      <td><b> Refactored Code Snippet </b> </td>
+   </tr>
+   <tr>
+      <td><img src="/resources/Original_Code_Snippet.png" width="400"/></td>
+      <td><img src="/resources/Refactored_Code_Snippet.png" width="400"/></td>
+      </tr>
+</table>
+
 ## Summary
 
 **Advantages and Disadvantages of Refactoring Code in general**
@@ -59,7 +70,7 @@ The execution time of the original script and refactored script were recorded.
 - The refactored VBA script used arrays to hold stock data. This provided advantage to speed up the execution time because all array elements are stored in continuous memory location. Thereby providing easy retrieval/addition/modification of elements when compared to using Double, Integer or String variables. Since an array has a single name and holds same datatype, the script is easy to read, and maintain.
 As the dataset grows or with dealing unknown number of stocks to analyze, dynamic arrays can be used. The size can be determined and be set at a later point in the code.
 - The refactored code had several for loops. Though, loops are often bottlenecks of performance for an application, they are an essential part of programming. The key to speeding up the script is to make the loops run faster. The refactoring added three for loops, each doing a different (lightweight) task helped to bring down the execution time of overall script.
-- The original VBA script held the core logic of the script in the inner loop of nested for loop. Temporary variables (of datatype: String, Integer, Double) hold and write the data to the output spreadsheet. Performing many tasks in the inner loop slowed down run time of the original code.
+- The original VBA script looked simple with a nested loop compared to three refactored for loops. However, the core logic is held in the inner loop of nested for loop. Temporary variables (of datatype: String, Integer, Double) hold and write the data to the output spreadsheet. Performing many tasks in the inner loop slowed down run time of the original code.
 - When the data set increases and more data aspects need to be analyzed, the execution times of original and refactored scripts will considerably slow down. Design decisions like storing and retrieving data from a database should be made accordingly.  
 
 
