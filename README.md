@@ -45,11 +45,14 @@ The execution time of the original script and refactored script were recorded.
 - The script run time for 2017 with refactoring decreased by 82%
 - The original Script run time for 2018: 0.5898438 seconds. The refactored Script run time for 2018: 0.109375 seconds
 - The script run time for 2018 with refactoring decreased by 81%
-- Refactoring the code proved beneficial as the run time was decreased over 80% for this dataset.
+- Refactoring the code proved beneficial as the run time decreased over 80% for this dataset.
 
 ## Summary
 
 **Advantages and Disadvantages of Refactoring Code in general**
+- Refactoring helps improve internal code by making many small changes but without changing the code's external behavior. It encourages a more in-depth understanding of the code, thereby making the code easier to understand and read. It improves maintainability and makes it easier to spot bugs or make further changes. Refactoring code may improve the performance of an application.
+- Imprecise refactoring can introduce new bugs and break the existing functionality. Refactoring, if not planned for,  will take extra time. This can lead to delays and extra work for the developer. Testing refactored code can be cumbersome if test cases are not in place.
+
 
 **Advantages and Disadvantages of the original and refactored VBA script**
 
